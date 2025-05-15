@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_1_2)">
+    <path d="M389.5 157.5C389.5 244.544 318.544 315.5 231.5 315.5C144.456 315.5 73.5 244.544 73.5 157.5C73.5 70.4563 144.456 -0.5 231.5 -0.5C318.544 -0.5 389.5 70.4563 389.5 157.5Z" fill="#FFE8E8"/>
+    <path d="M231.5 315.5C318.544 315.5 389.5 244.544 389.5 157.5C389.5 70.4563 318.544 -0.5 231.5 -0.5" stroke="#FF6B6B" stroke-opacity="0.5"/>
+    <path d="M231.5 -0.5C144.456 -0.5 73.5 70.4563 73.5 157.5C73.5 244.544 144.456 315.5 231.5 315.5" stroke="#FFD166" stroke-opacity="0.5"/>
+    
+    <!-- Laptop -->
+    <rect x="150" y="150" width="200" height="130" rx="10" fill="#333333"/>
+    <rect x="160" y="160" width="180" height="110" rx="5" fill="#FFFFFF"/>
+    <rect x="130" y="280" width="240" height="10" rx="5" fill="#333333"/>
+    <rect x="180" y="290" width="140" height="5" rx="2.5" fill="#333333"/>
+    
+    <!-- Code on Screen -->
+    <rect x="170" y="170" width="50" height="5" rx="2.5" fill="#FF6B6B"/>
+    <rect x="230" y="170" width="30" height="5" rx="2.5" fill="#FFD166"/>
+    <rect x="270" y="170" width="60" height="5" rx="2.5" fill="#06D6A0"/>
+    
+    <rect x="170" y="185" width="40" height="5" rx="2.5" fill="#118AB2"/>
+    <rect x="220" y="185" width="70" height="5" rx="2.5" fill="#FF6B6B"/>
+    <rect x="300" y="185" width="30" height="5" rx="2.5" fill="#FFD166"/>
+    
+    <rect x="170" y="200" width="60" height="5" rx="2.5" fill="#06D6A0"/>
+    <rect x="240" y="200" width="40" height="5" rx="2.5" fill="#118AB2"/>
+    <rect x="290" y="200" width="40" height="5" rx="2.5" fill="#FF6B6B"/>
+    
+    <rect x="170" y="215" width="30" height="5" rx="2.5" fill="#FFD166"/>
+    <rect x="210" y="215" width="50" height="5" rx="2.5" fill="#06D6A0"/>
+    <rect x="270" y="215" width="60" height="5" rx="2.5" fill="#118AB2"/>
+    
+    <rect x="170" y="230" width="70" height="5" rx="2.5" fill="#FF6B6B"/>
+    <rect x="250" y="230" width="30" height="5" rx="2.5" fill="#FFD166"/>
+    <rect x="290" y="230" width="40" height="5" rx="2.5" fill="#06D6A0"/>
+    
+    <rect x="170" y="245" width="40" height="5" rx="2.5" fill="#118AB2"/>
+    <rect x="220" y="245" width="60" height="5" rx="2.5" fill="#FF6B6B"/>
+    <rect x="290" y="245" width="30" height="5" rx="2.5" fill="#FFD166"/>
+    
+    <!-- Floating Elements -->
+    <circle cx="100" cy="100" r="20" fill="#FF6B6B" fill-opacity="0.3"/>
+    <circle cx="350" cy="80" r="15" fill="#FFD166" fill-opacity="0.3"/>
+    <circle cx="380" cy="200" r="25" fill="#06D6A0" fill-opacity="0.3"/>
+    <circle cx="120" cy="220" r="18" fill="#118AB2" fill-opacity="0.3"/>
+    
+    <!-- Code Symbols -->
+    <path d="M90 120L75 135L90 150" stroke="#FF6B6B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M110 120L125 135L110 150" stroke="#FFD166" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <path d="M370 100L355 115L370 130" stroke="#06D6A0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M390 100L405 115L390 130" stroke="#118AB2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <circle cx="100" cy="180" r="5" fill="#FF6B6B"/>
+    <circle cx="120" cy="180" r="5" fill="#FFD166"/>
+    <circle cx="140" cy="180" r="5" fill="#06D6A0"/>
+    
+    <circle cx="360" cy="240" r="5" fill="#FF6B6B"/>
+    <circle cx="380" cy="240" r="5" fill="#FFD166"/>
+    <circle cx="400" cy="240" r="5" fill="#06D6A0"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_1_2">
+      <rect width="500" height="400" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>

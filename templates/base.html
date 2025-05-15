@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="محفظة أعمال احترافية لعرض مشاريعي ومهاراتي">
+    <meta name="keywords" content="محفظة أعمال، مطور ويب، تصميم مواقع، برمجة">
+    <meta name="author" content="اسمك هنا">
+    <title>{{ title }} | محفظتي الاحترافية</title>
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="{{ title }} | محفظتي الاحترافية">
+    <meta property="og:description" content="محفظة أعمال احترافية لعرض مشاريعي ومهاراتي">
+    <meta property="og:image" content="{{ url_for('static', filename='img/og-image.jpg', _external=True) }}">
+    <meta property="og:url" content="{{ request.url }}">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">جاري التحميل...</span>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+                <span class="text-primary">محفظتي</span> الاحترافية
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">من أنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('skills') }}">المهارات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('services') }}">خدماتي</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('projects') }}">المشاريع</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('testimonials') }}">آراء العملاء</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('blog') }}">المدونة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">اتصل بي</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mt-5 pt-5">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Enhanced Footer with Modern Design -->
+    <footer class="footer-section">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-up">
+                        <div class="footer-about">
+                            <div class="footer-logo mb-4">
+                                <span class="text-gradient">محفظتي</span> الاحترافية
+                            </div>
+                            <p>أقدم خدمات تطوير الويب وتصميم المواقع الإلكترونية بجودة عالية وأسعار منافسة. هدفي هو تقديم حلول رقمية مبتكرة تساعد عملائي على النجاح.</p>
+                            <div class="footer-social-icons">
+                                <a href="#" class="footer-social-icon github" data-tooltip="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="footer-social-icon linkedin" data-tooltip="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="footer-social-icon twitter" data-tooltip="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="footer-social-icon instagram" data-tooltip="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="footer-social-icon behance" data-tooltip="Behance">
+                                    <i class="fab fa-behance"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                        <div class="footer-links">
+                            <h3 class="footer-heading">روابط سريعة</h3>
+                            <div class="footer-links-grid">
+                                <div class="footer-link-column">
+                                    <a href="{{ url_for('home') }}" class="footer-link">
+                                        <span class="footer-link-icon"><i class="fas fa-home"></i></span>
+                                        <span class="footer-link-text">الرئيسية</span>
+                                    </a>
+                                    <a href="{{ url_for('about') }}" class="footer-link">
+                                        <span class="footer-link-icon"><i class="fas fa-user"></i></span>
+                                        <span class="footer-link-text">من أنا</span>
+                                    </a>
+                                    <a href="{{ url_for('skills') }}" class="footer-link">
+                                        <span class="footer-link-icon"><i class="fas fa-code"></i></span>
+                                        <span class="footer-link-text">المهارات</span>
+                                    </a>
+                                    <a href="{{ url_for('services') }}" class="footer-link">
+                                        <span class="footer-link-icon"><i class="fas fa-cogs"></i></span>
+                                        <span class="footer-link-text">خدماتي</span>
+                                    </a>
+                                </div>
+                                <div class="footer-link-column">
+                                    <a href="{{ url_for('projects') }}" class="footer-link">
+                                        <span class="footer-link-icon"><i class="fas fa-project-diagram"></i></span>
+                                        <span class="footer-link-text">المشاريع</span>
+                                    </a>
+                                    <a href="{{ url_for('testimonials') }}" class="footer-link">
+                                        <span class="footer-link-icon"><i class="fas fa-comment-alt"></i></span>
+                                        <span class="footer-link-text">آراء العملاء</span>
+                                    </a>
+                                    <a href="{{ url_for('blog') }}" class="footer-link">
+                                        <span class="footer-link-icon"><i class="fas fa-blog"></i></span>
+                                        <span class="footer-link-text">المدونة</span>
+                                    </a>
+                                    <a href="{{ url_for('contact') }}" class="footer-link">
+                                        <span class="footer-link-icon"><i class="fas fa-envelope"></i></span>
+                                        <span class="footer-link-text">اتصل بي</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="footer-contact">
+                            <h3 class="footer-heading">تواصل معي</h3>
+                            <div class="footer-contact-item">
+                                <div class="footer-contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="footer-contact-info">
+                                    <h4>البريد الإلكتروني</h4>
+                                    <a href="mailto:your.email@example.com" class="footer-contact-link">your.email@example.com</a>
+                                </div>
+                            </div>
+                            <div class="footer-contact-item">
+                                <div class="footer-contact-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="footer-contact-info">
+                                    <h4>رقم الهاتف</h4>
+                                    <a href="tel:+123456789" class="footer-contact-link">+12 345 6789</a>
+                                </div>
+                            </div>
+                            <div class="footer-contact-item">
+                                <div class="footer-contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="footer-contact-info">
+                                    <h4>العنوان</h4>
+                                    <p>المدينة، البلد</p>
+                                </div>
+                            </div>
+                            <div class="footer-newsletter mt-4">
+                                <h4>اشترك في النشرة البريدية</h4>
+                                <form class="footer-newsletter-form">
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" placeholder="البريد الإلكتروني" required>
+                                        <button class="btn btn-primary" type="submit">
+                                            <i class="fas fa-paper-plane"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">&copy; {{ current_year }} محفظتي الاحترافية. جميع الحقوق محفوظة.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="credits">تم التصميم بواسطة <a href="{{ url_for('home') }}" class="designer-link">اسمك هنا</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-shape-1"></div>
+        <div class="footer-shape-2"></div>
+        <div class="footer-shape-3"></div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="العودة إلى الأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" aria-label="تبديل المظهر">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- Initialize AOS -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Hide preloader when page is loaded
+        window.addEventListener('load', function() {
+            document.querySelector('.preloader').style.display = 'none';
+        });
+
+        // Back to top button
+        const backToTopButton = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('active');
+            } else {
+                backToTopButton.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

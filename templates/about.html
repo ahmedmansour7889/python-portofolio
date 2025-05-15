@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="about-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+                <img src="https://via.placeholder.com/500x600" alt="Profile Picture" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-7">
+                <h1 class="mb-4">من أنا</h1>
+                <p class="lead">مطور ويب شغوف ومصمم إبداعي مع خبرة عدة سنوات في صناعة التكنولوجيا.</p>
+                <p>مرحباً! أنا [اسمك] مطور ويب متخصص في إنشاء مواقع وتطبيقات ويب مبتكرة وعالية الأداء. بدأت رحلتي في عالم البرمجة منذ عدة سنوات، وتطورت مهاراتي باستمرار لمواكبة أحدث التقنيات والاتجاهات في المجال.</p>
+                <p>شغفي هو حل المشكلات المعقدة وتحويل الأفكار المبتكرة إلى منتجات رقمية واقعية تلبي احتياجات المستخدمين بطريقة سلسة وجذابة. أؤمن بأن التصميم الجيد والوظائف السلسة هما مفتاح نجاح أي مشروع رقمي.</p>
+                <p>عندما لا أكون أكتب أكواد برمجية، تجدني أقرأ عن أحدث التقنيات، أمارس الرياضة، أو أستكشف أماكن جديدة.</p>
+                
+                <div class="mt-4">
+                    <h4>التعليم</h4>
+                    <div class="mb-3">
+                        <h5>بكالوريوس علوم الحاسب</h5>
+                        <p>جامعة [اسم الجامعة] | 2017-2021</p>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <h4>الخبرات المهنية</h4>
+                    <div class="mb-3">
+                        <h5>مطور ويب متكامل</h5>
+                        <p>شركة [اسم الشركة] | 2021-الحاضر</p>
+                        <ul>
+                            <li>تطوير وتحسين موقع الشركة الرئيسي</li>
+                            <li>إنشاء تطبيقات ويب متكاملة لعملاء متعددين</li>
+                            <li>العمل ضمن فريق متعدد التخصصات</li>
+                        </ul>
+                    </div>
+                    <div class="mb-3">
+                        <h5>مطور واجهة أمامية</h5>
+                        <p>شركة [اسم الشركة السابقة] | 2019-2021</p>
+                        <ul>
+                            <li>تطوير واجهات مستخدم تفاعلية</li>
+                            <li>تحسين أداء المواقع وتجربة المستخدم</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <a href="{{ url_for('static', filename='files/resume.pdf') }}" class="btn btn-primary me-3">تحميل السيرة الذاتية</a>
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline-dark">اتصل بي</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="skills-section py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">مهاراتي التقنية</h2>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h4>تطوير الواجهة الأمامية</h4>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>HTML/CSS</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>JavaScript</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>React.js</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <h4>تطوير الخلفية</h4>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>Python</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>Flask/Django</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span>SQL/Databases</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

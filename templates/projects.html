@@ -1,0 +1,360 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="projects-section py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="mb-3" data-aos="fade-up">مشاريعي</h1>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100">مجموعة مختارة من أحدث وأفضل المشاريع التي قمت بتنفيذها</p>
+                <div class="divider mx-auto my-4" data-aos="fade-up" data-aos-delay="200"></div>
+            </div>
+        </div>
+
+        <div class="filters mb-5" data-aos="fade-up">
+            <div class="text-center">
+                <button class="btn filter-btn active" data-filter="all">الكل</button>
+                <button class="btn filter-btn" data-filter="web">تطوير الويب</button>
+                <button class="btn filter-btn" data-filter="mobile">تطبيقات الموبايل</button>
+                <button class="btn filter-btn" data-filter="design">تصميم</button>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for project in projects %}
+            <div class="col-md-6 col-lg-4 mb-4 project-item {{ project.category }}" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                <div class="project-card">
+                    <div class="project-img-container">
+                        <img src="{{ project.image }}" alt="{{ project.title }}">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="{{ project.link }}" class="project-btn view-btn">
+                                    <i class="fas fa-eye"></i>
+                                    <span>عرض المشروع</span>
+                                </a>
+                                <a href="#" class="project-btn details-btn" data-bs-toggle="modal" data-bs-target="#projectModal{{ loop.index }}">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>تفاصيل</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">
+                            <span>{{ project.category }}</span>
+                        </div>
+                        <h3 class="project-title">{{ project.title }}</h3>
+                        <p class="project-description">{{ project.description }}</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML5</span>
+                            <span class="project-tag">CSS3</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-date">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>2023</span>
+                            </div>
+                            <div class="project-more">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal{{ loop.index }}">
+                                    المزيد
+                                    <i class="fas fa-long-arrow-alt-left"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enhanced Project Modal -->
+                <div class="modal fade" id="projectModal{{ loop.index }}" tabindex="-1" aria-labelledby="projectModalLabel{{ loop.index }}" aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="projectModalLabel{{ loop.index }}">{{ project.title }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body p-0">
+                                <div class="project-modal-content">
+                                    <div class="project-modal-gallery">
+                                        <div class="project-modal-main-img">
+                                            <img src="{{ project.image }}" alt="{{ project.title }}">
+                                        </div>
+                                        <div class="project-modal-thumbs">
+                                            <div class="project-modal-thumb active">
+                                                <img src="{{ project.image }}" alt="{{ project.title }}">
+                                            </div>
+                                            <div class="project-modal-thumb">
+                                                <img src="{{ project.image }}" alt="{{ project.title }}">
+                                            </div>
+                                            <div class="project-modal-thumb">
+                                                <img src="{{ project.image }}" alt="{{ project.title }}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="project-modal-info">
+                                        <div class="project-modal-section">
+                                            <h3 class="project-modal-section-title">
+                                                <i class="fas fa-info-circle"></i>
+                                                <span>نبذة عن المشروع</span>
+                                            </h3>
+                                            <p>{{ project.description }}</p>
+                                            <p>هذا المشروع يهدف إلى تقديم تجربة مستخدم فريدة وسهلة الاستخدام مع التركيز على الأداء العالي وسرعة التحميل.</p>
+                                        </div>
+
+                                        <div class="project-modal-section">
+                                            <h3 class="project-modal-section-title">
+                                                <i class="fas fa-cogs"></i>
+                                                <span>التقنيات المستخدمة</span>
+                                            </h3>
+                                            <div class="project-modal-tech">
+                                                <div class="project-modal-tech-item">
+                                                    <div class="project-modal-tech-icon">
+                                                        <i class="fab fa-html5"></i>
+                                                    </div>
+                                                    <div class="project-modal-tech-name">HTML5</div>
+                                                </div>
+                                                <div class="project-modal-tech-item">
+                                                    <div class="project-modal-tech-icon">
+                                                        <i class="fab fa-css3-alt"></i>
+                                                    </div>
+                                                    <div class="project-modal-tech-name">CSS3</div>
+                                                </div>
+                                                <div class="project-modal-tech-item">
+                                                    <div class="project-modal-tech-icon">
+                                                        <i class="fab fa-js"></i>
+                                                    </div>
+                                                    <div class="project-modal-tech-name">JavaScript</div>
+                                                </div>
+                                                <div class="project-modal-tech-item">
+                                                    <div class="project-modal-tech-icon">
+                                                        <i class="fab fa-bootstrap"></i>
+                                                    </div>
+                                                    <div class="project-modal-tech-name">Bootstrap</div>
+                                                </div>
+                                                <div class="project-modal-tech-item">
+                                                    <div class="project-modal-tech-icon">
+                                                        <i class="fab fa-python"></i>
+                                                    </div>
+                                                    <div class="project-modal-tech-name">Python</div>
+                                                </div>
+                                                <div class="project-modal-tech-item">
+                                                    <div class="project-modal-tech-icon">
+                                                        <i class="fab fa-flask"></i>
+                                                    </div>
+                                                    <div class="project-modal-tech-name">Flask</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-modal-section">
+                                            <h3 class="project-modal-section-title">
+                                                <i class="fas fa-tasks"></i>
+                                                <span>التحديات والحلول</span>
+                                            </h3>
+                                            <div class="project-modal-challenges">
+                                                <div class="project-modal-challenge">
+                                                    <div class="project-modal-challenge-header">
+                                                        <i class="fas fa-exclamation-circle"></i>
+                                                        <h4>تحسين سرعة التحميل</h4>
+                                                    </div>
+                                                    <p>واجهنا تحديات في تحسين سرعة تحميل الموقع خاصة مع وجود العديد من الصور والمحتوى.</p>
+                                                    <div class="project-modal-solution">
+                                                        <i class="fas fa-lightbulb"></i>
+                                                        <p>قمنا بتطبيق تقنيات تحسين الصور وتأجيل تحميل الموارد غير الضرورية وتحسين الكود.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="project-modal-challenge">
+                                                    <div class="project-modal-challenge-header">
+                                                        <i class="fas fa-exclamation-circle"></i>
+                                                        <h4>تحسين تجربة المستخدم</h4>
+                                                    </div>
+                                                    <p>كان من الضروري تقديم تجربة مستخدم سلسة وبديهية على جميع الأجهزة.</p>
+                                                    <div class="project-modal-solution">
+                                                        <i class="fas fa-lightbulb"></i>
+                                                        <p>قمنا بتصميم واجهة مستخدم متجاوبة مع التركيز على سهولة الاستخدام والوصول.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="project-modal-section">
+                                            <h3 class="project-modal-section-title">
+                                                <i class="fas fa-link"></i>
+                                                <span>روابط المشروع</span>
+                                            </h3>
+                                            <div class="project-modal-links">
+                                                <a href="{{ project.link }}" class="project-modal-link">
+                                                    <i class="fas fa-globe"></i>
+                                                    <span>الموقع الحي</span>
+                                                </a>
+                                                <a href="#" class="project-modal-link">
+                                                    <i class="fab fa-github"></i>
+                                                    <span>كود المشروع</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="cta-section py-5 my-5 bg-light">
+    <div class="container text-center py-4" data-aos="fade-up">
+        <h2 class="mb-4">هل لديك مشروع بحاجة للتنفيذ؟</h2>
+        <p class="lead mb-4">أنا دائماً متحمس للعمل على مشاريع جديدة ومثيرة. دعنا نتحدث عن كيفية تحقيق رؤيتك!</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">تواصل معي الآن</a>
+    </div>
+</section>
+
+<section class="process-section py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <span class="badge bg-primary rounded-pill px-3 py-2 mb-3" data-aos="fade-up">منهجية العمل</span>
+                <h2 data-aos="fade-up" data-aos-delay="100">كيف أعمل</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="200">منهجية عملي المتطورة في تنفيذ المشاريع بأعلى معايير الجودة</p>
+                <div class="divider mx-auto my-4" data-aos="fade-up" data-aos-delay="300"></div>
+            </div>
+        </div>
+
+        <div class="row process-row">
+            <!-- Step 1 -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up">
+                <div class="process-step text-center">
+                    <div class="process-number">1</div>
+                    <h4>التخطيط والتحليل</h4>
+                    <p>فهم متطلبات المشروع وتحليل احتياجات العمل وتحديد الأهداف والنطاق بدقة.</p>
+                    <div class="process-features">
+                        <div class="process-feature-item">
+                            <i class="fas fa-comments"></i>
+                            <span>استشارات مفصلة</span>
+                        </div>
+                        <div class="process-feature-item">
+                            <i class="fas fa-tasks"></i>
+                            <span>تحديد المتطلبات</span>
+                        </div>
+                        <div class="process-feature-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>تحليل السوق</span>
+                        </div>
+                    </div>
+                    <div class="process-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                <div class="process-step text-center">
+                    <div class="process-number">2</div>
+                    <h4>التصميم والنماذج</h4>
+                    <p>إنشاء تصاميم جذابة وسهلة الاستخدام تلبي احتياجات المستخدمين وأهداف العمل.</p>
+                    <div class="process-features">
+                        <div class="process-feature-item">
+                            <i class="fas fa-pencil-ruler"></i>
+                            <span>تصميم UI/UX</span>
+                        </div>
+                        <div class="process-feature-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>تصميم متجاوب</span>
+                        </div>
+                        <div class="process-feature-item">
+                            <i class="fas fa-palette"></i>
+                            <span>هوية بصرية</span>
+                        </div>
+                    </div>
+                    <div class="process-icon">
+                        <i class="fas fa-bezier-curve"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+                <div class="process-step text-center">
+                    <div class="process-number">3</div>
+                    <h4>التطوير والبرمجة</h4>
+                    <p>تحويل التصاميم إلى كود برمجي فعال وقابل للتوسع باستخدام أحدث التقنيات المتطورة.</p>
+                    <div class="process-features">
+                        <div class="process-feature-item">
+                            <i class="fas fa-code"></i>
+                            <span>كود نظيف</span>
+                        </div>
+                        <div class="process-feature-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>تكامل API</span>
+                        </div>
+                        <div class="process-feature-item">
+                            <i class="fas fa-database"></i>
+                            <span>قواعد بيانات</span>
+                        </div>
+                    </div>
+                    <div class="process-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+                <div class="process-step text-center">
+                    <div class="process-number">4</div>
+                    <h4>الاختبار والإطلاق</h4>
+                    <p>اختبار شامل للتأكد من جودة المنتج وإطلاقه مع توفير الدعم المستمر والتحديثات.</p>
+                    <div class="process-features">
+                        <div class="process-feature-item">
+                            <i class="fas fa-vial"></i>
+                            <span>اختبار شامل</span>
+                        </div>
+                        <div class="process-feature-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>نشر وإطلاق</span>
+                        </div>
+                        <div class="process-feature-item">
+                            <i class="fas fa-headset"></i>
+                            <span>دعم مستمر</span>
+                        </div>
+                    </div>
+                    <div class="process-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg-10 mx-auto">
+                <div class="process-timeline" data-aos="fade-up">
+                    <div class="process-timeline-track"></div>
+                    <div class="process-timeline-points">
+                        <div class="process-timeline-point active" data-step="1">
+                            <div class="process-timeline-point-inner">1</div>
+                            <span class="process-timeline-label">التخطيط</span>
+                        </div>
+                        <div class="process-timeline-point" data-step="2">
+                            <div class="process-timeline-point-inner">2</div>
+                            <span class="process-timeline-label">التصميم</span>
+                        </div>
+                        <div class="process-timeline-point" data-step="3">
+                            <div class="process-timeline-point-inner">3</div>
+                            <span class="process-timeline-label">التطوير</span>
+                        </div>
+                        <div class="process-timeline-point" data-step="4">
+                            <div class="process-timeline-point-inner">4</div>
+                            <span class="process-timeline-label">الإطلاق</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

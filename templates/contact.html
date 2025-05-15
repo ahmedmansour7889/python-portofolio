@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="contact-section py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <span class="badge bg-primary rounded-pill px-3 py-2 mb-3" data-aos="fade-up">تواصل معي</span>
+                <h1 class="mb-3" data-aos="fade-up" data-aos-delay="100">اتصل بي</h1>
+                <p class="lead" data-aos="fade-up" data-aos-delay="200">أنا متاح دائمًا للتواصل والرد على استفساراتك. يمكنك التواصل معي من خلال أي من الوسائل التالية.</p>
+                <div class="divider mx-auto my-4" data-aos="fade-up" data-aos-delay="300"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-up">
+                <div class="contact-info p-4 rounded h-100">
+                    <div class="contact-info-header mb-4">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-address-card"></i>
+                        </div>
+                        <h3>معلومات التواصل</h3>
+                    </div>
+
+                    <div class="contact-item d-flex mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>البريد الإلكتروني</h5>
+                            <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item d-flex mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>رقم الهاتف</h5>
+                            <p><a href="tel:+123456789">+12 345 6789</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item d-flex mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h5>الموقع</h5>
+                            <p>المدينة، البلد</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-availability p-3 mb-4">
+                        <div class="d-flex align-items-center">
+                            <div class="availability-indicator me-3"></div>
+                            <div>
+                                <h5 class="mb-1">متاح للعمل الحر</h5>
+                                <p class="mb-0">أنا متاح حاليًا لمشاريع جديدة</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h5 class="mb-3">تواصل معي على</h5>
+                        <div class="social-icons-container">
+                            <div class="social-icons-wrapper">
+                                <a href="#" class="social-icon linkedin" data-tooltip="لينكد إن">
+                                    <div class="social-icon-inner">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </div>
+                                </a>
+                                <a href="#" class="social-icon github" data-tooltip="جيت هاب">
+                                    <div class="social-icon-inner">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                </a>
+                                <a href="#" class="social-icon twitter" data-tooltip="تويتر">
+                                    <div class="social-icon-inner">
+                                        <i class="fab fa-twitter"></i>
+                                    </div>
+                                </a>
+                                <a href="#" class="social-icon instagram" data-tooltip="انستجرام">
+                                    <div class="social-icon-inner">
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                </a>
+                                <a href="#" class="social-icon whatsapp" data-tooltip="واتساب">
+                                    <div class="social-icon-inner">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-cta mt-4">
+                        <a href="https://wa.me/123456789" class="whatsapp-btn">
+                            <div class="whatsapp-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="whatsapp-text">
+                                <span>تواصل معي على الواتساب</span>
+                                <small>متاح للرد خلال ساعات العمل</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+                <div class="contact-form p-4 rounded">
+                    <div class="contact-form-header mb-4">
+                        <h3>أرسل لي رسالة</h3>
+                        <p>يسعدني الرد على استفساراتك وطلباتك في أقرب وقت ممكن</p>
+                    </div>
+
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="الاسم" required>
+                                    <label for="name"><i class="fas fa-user me-2"></i>الاسم</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="البريد الإلكتروني" required>
+                                    <label for="email"><i class="fas fa-envelope me-2"></i>البريد الإلكتروني</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="subject" placeholder="الموضوع" required>
+                                <label for="subject"><i class="fas fa-heading me-2"></i>الموضوع</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="form-floating">
+                                <textarea class="form-control" id="message" placeholder="الرسالة" style="height: 150px" required></textarea>
+                                <label for="message"><i class="fas fa-comment-alt me-2"></i>الرسالة</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg w-100">
+                            <i class="fas fa-paper-plane me-2"></i>إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="map-section py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <span class="badge bg-primary rounded-pill px-3 py-2 mb-3" data-aos="fade-up">الموقع</span>
+                <h2 class="mb-3" data-aos="fade-up" data-aos-delay="100">موقعي</h2>
+                <p class="lead" data-aos="fade-up" data-aos-delay="200">يمكنك زيارتي في المكتب أو تحديد موعد للقاء</p>
+                <div class="divider mx-auto my-4" data-aos="fade-up" data-aos-delay="300"></div>
+            </div>
+        </div>
+
+        <div class="map-container" data-aos="fade-up">
+            <div class="map-card">
+                <div class="map-frame">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30591910525!2d-74.25986548248684!3d40.697149396079285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1655384394261!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="map-info">
+                    <div class="map-info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h5>ساعات العمل</h5>
+                            <p>الأحد - الخميس: 9 صباحًا - 5 مساءً</p>
+                        </div>
+                    </div>
+                    <div class="map-info-item">
+                        <i class="fas fa-subway"></i>
+                        <div>
+                            <h5>وسائل النقل</h5>
+                            <p>محطة المترو على بعد 5 دقائق سيرًا</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-contact py-5">
+    <div class="container text-center py-5" data-aos="fade-up">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="mb-4">هل أنت مستعد لبدء مشروعك التالي؟</h2>
+                <p class="lead mb-4">دعنا نتعاون معًا لتحويل فكرتك إلى واقع رقمي مميز</p>
+                <div class="d-flex justify-content-center mt-5">
+                    <a href="#contactForm" class="btn btn-primary btn-lg px-5">
+                        <i class="fas fa-rocket me-2"></i>لنبدأ الآن
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

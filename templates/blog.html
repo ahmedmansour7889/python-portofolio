@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="blog-section py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="mb-3" data-aos="fade-up">المدونة</h1>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100">أحدث المقالات والنصائح في مجال تطوير الويب والتصميم</p>
+                <div class="divider mx-auto my-4" data-aos="fade-up" data-aos-delay="200"></div>
+            </div>
+        </div>
+        
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <div class="blog-filter mb-4" data-aos="fade-up">
+                    <button class="btn blog-filter-btn active" data-category="all">الكل</button>
+                    <button class="btn blog-filter-btn" data-category="web-development">تطوير الويب</button>
+                    <button class="btn blog-filter-btn" data-category="design">التصميم</button>
+                    <button class="btn blog-filter-btn" data-category="seo">تحسين محركات البحث</button>
+                    <button class="btn blog-filter-btn" data-category="tips">نصائح وحيل</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Blog Post 1 -->
+            <div class="col-lg-4 col-md-6 mb-4 blog-card" data-category="web-development" data-aos="fade-up">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="كيفية تحسين أداء موقع الويب الخاص بك">
+                    <div class="card-body">
+                        <div class="blog-meta mb-2">
+                            <span><i class="far fa-calendar-alt me-1"></i> 15 يونيو 2023</span>
+                            <span class="ms-3"><i class="far fa-folder me-1"></i> تطوير الويب</span>
+                        </div>
+                        <h5 class="card-title">كيفية تحسين أداء موقع الويب الخاص بك</h5>
+                        <p class="card-text">تعرف على أفضل الممارسات والتقنيات لتحسين سرعة وأداء موقع الويب الخاص بك لتوفير تجربة مستخدم أفضل.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-primary">قراءة المزيد</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 2 -->
+            <div class="col-lg-4 col-md-6 mb-4 blog-card" data-category="design" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="اتجاهات تصميم الويب لعام 2023">
+                    <div class="card-body">
+                        <div class="blog-meta mb-2">
+                            <span><i class="far fa-calendar-alt me-1"></i> 2 يونيو 2023</span>
+                            <span class="ms-3"><i class="far fa-folder me-1"></i> التصميم</span>
+                        </div>
+                        <h5 class="card-title">اتجاهات تصميم الويب لعام 2023</h5>
+                        <p class="card-text">استكشف أحدث اتجاهات تصميم الويب التي تسيطر على الساحة هذا العام وكيفية تطبيقها في مشاريعك.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-primary">قراءة المزيد</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 3 -->
+            <div class="col-lg-4 col-md-6 mb-4 blog-card" data-category="seo" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="دليل شامل لتحسين محركات البحث">
+                    <div class="card-body">
+                        <div class="blog-meta mb-2">
+                            <span><i class="far fa-calendar-alt me-1"></i> 20 مايو 2023</span>
+                            <span class="ms-3"><i class="far fa-folder me-1"></i> تحسين محركات البحث</span>
+                        </div>
+                        <h5 class="card-title">دليل شامل لتحسين محركات البحث</h5>
+                        <p class="card-text">تعلم كيفية تحسين ظهور موقعك في نتائج محركات البحث وزيادة الزيارات العضوية من خلال استراتيجيات SEO فعالة.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-primary">قراءة المزيد</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 4 -->
+            <div class="col-lg-4 col-md-6 mb-4 blog-card" data-category="web-development" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="مقدمة في إطار العمل React.js">
+                    <div class="card-body">
+                        <div class="blog-meta mb-2">
+                            <span><i class="far fa-calendar-alt me-1"></i> 10 مايو 2023</span>
+                            <span class="ms-3"><i class="far fa-folder me-1"></i> تطوير الويب</span>
+                        </div>
+                        <h5 class="card-title">مقدمة في إطار العمل React.js</h5>
+                        <p class="card-text">تعرف على أساسيات إطار العمل React.js وكيفية استخدامه لبناء واجهات مستخدم تفاعلية وديناميكية.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-primary">قراءة المزيد</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 5 -->
+            <div class="col-lg-4 col-md-6 mb-4 blog-card" data-category="tips" data-aos="fade-up" data-aos-delay="400">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="10 أدوات أساسية لكل مطور ويب">
+                    <div class="card-body">
+                        <div class="blog-meta mb-2">
+                            <span><i class="far fa-calendar-alt me-1"></i> 1 مايو 2023</span>
+                            <span class="ms-3"><i class="far fa-folder me-1"></i> نصائح وحيل</span>
+                        </div>
+                        <h5 class="card-title">10 أدوات أساسية لكل مطور ويب</h5>
+                        <p class="card-text">اكتشف الأدوات والموارد التي يمكن أن تساعدك على تحسين إنتاجيتك وكفاءتك كمطور ويب.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-primary">قراءة المزيد</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 6 -->
+            <div class="col-lg-4 col-md-6 mb-4 blog-card" data-category="design" data-aos="fade-up" data-aos-delay="500">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="مبادئ تصميم واجهة المستخدم">
+                    <div class="card-body">
+                        <div class="blog-meta mb-2">
+                            <span><i class="far fa-calendar-alt me-1"></i> 20 أبريل 2023</span>
+                            <span class="ms-3"><i class="far fa-folder me-1"></i> التصميم</span>
+                        </div>
+                        <h5 class="card-title">مبادئ تصميم واجهة المستخدم</h5>
+                        <p class="card-text">تعلم المبادئ الأساسية لتصميم واجهات مستخدم جذابة وسهلة الاستخدام تحسن تجربة المستخدم.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-primary">قراءة المزيد</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-12 text-center" data-aos="fade-up">
+                <nav aria-label="Blog pagination">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">السابق</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">التالي</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="newsletter-section py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                <h2 class="mb-4">اشترك في النشرة الإخبارية</h2>
+                <p class="lead mb-4">احصل على أحدث المقالات والنصائح في مجال تطوير الويب والتصميم مباشرة إلى بريدك الإلكتروني</p>
+                <form class="newsletter-form">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="أدخل بريدك الإلكتروني" aria-label="Email address" required>
+                        <button class="btn btn-primary" type="submit">اشترك</button>
+                    </div>
+                </form>
+                <small class="text-muted">لن نشارك بريدك الإلكتروني مع أي جهة أخرى ويمكنك إلغاء الاشتراك في أي وقت.</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Blog filtering
+        const filterButtons = document.querySelectorAll('.blog-filter-btn');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+                
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter blog posts
+                filterBlogPosts(category);
+            });
+        });
+    });
+</script>
+{% endblock %}

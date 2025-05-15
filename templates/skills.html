@@ -1,0 +1,858 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="skills-section py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="mb-3" data-aos="fade-up">مهاراتي وشهاداتي</h1>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100">نظرة عامة على مهاراتي التقنية والشهادات التي حصلت عليها</p>
+                <div class="divider mx-auto my-4" data-aos="fade-up" data-aos-delay="200"></div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12 text-center mb-5" data-aos="fade-up">
+                <div class="skills-tabs">
+                    <button class="skills-tab-btn active" data-target="technical">المهارات التقنية</button>
+                    <button class="skills-tab-btn" data-target="personal">المهارات الشخصية</button>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="skills-tab-content active" id="technical-skills">
+                    <div class="row">
+                        <!-- HTML & CSS -->
+                        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="skill-card html-css">
+                                <div class="skill-card-icon">
+                                    <i class="fab fa-html5"></i>
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <div class="skill-card-info">
+                                    <h4>HTML5 & CSS3</h4>
+                                    <div class="skill-level">
+                                        <div class="skill-percent">95%</div>
+                                        <div class="skill-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card-progress">
+                                    <div class="skill-progress-bar" style="width: 95%"></div>
+                                </div>
+                                <div class="skill-card-badges">
+                                    <span class="skill-badge">Responsive</span>
+                                    <span class="skill-badge">Animations</span>
+                                    <span class="skill-badge">Flexbox</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- JavaScript -->
+                        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="skill-card javascript">
+                                <div class="skill-card-icon">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <div class="skill-card-info">
+                                    <h4>JavaScript & jQuery</h4>
+                                    <div class="skill-level">
+                                        <div class="skill-percent">90%</div>
+                                        <div class="skill-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card-progress">
+                                    <div class="skill-progress-bar" style="width: 90%"></div>
+                                </div>
+                                <div class="skill-card-badges">
+                                    <span class="skill-badge">ES6+</span>
+                                    <span class="skill-badge">DOM</span>
+                                    <span class="skill-badge">AJAX</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- React -->
+                        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="skill-card react">
+                                <div class="skill-card-icon">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <div class="skill-card-info">
+                                    <h4>React.js</h4>
+                                    <div class="skill-level">
+                                        <div class="skill-percent">85%</div>
+                                        <div class="skill-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card-progress">
+                                    <div class="skill-progress-bar" style="width: 85%"></div>
+                                </div>
+                                <div class="skill-card-badges">
+                                    <span class="skill-badge">Hooks</span>
+                                    <span class="skill-badge">Redux</span>
+                                    <span class="skill-badge">Context</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Python -->
+                        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="skill-card python">
+                                <div class="skill-card-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <div class="skill-card-info">
+                                    <h4>Python & Flask</h4>
+                                    <div class="skill-level">
+                                        <div class="skill-percent">88%</div>
+                                        <div class="skill-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card-progress">
+                                    <div class="skill-progress-bar" style="width: 88%"></div>
+                                </div>
+                                <div class="skill-card-badges">
+                                    <span class="skill-badge">Flask</span>
+                                    <span class="skill-badge">Django</span>
+                                    <span class="skill-badge">API</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SQL -->
+                        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="skill-card database">
+                                <div class="skill-card-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="skill-card-info">
+                                    <h4>SQL & قواعد البيانات</h4>
+                                    <div class="skill-level">
+                                        <div class="skill-percent">80%</div>
+                                        <div class="skill-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card-progress">
+                                    <div class="skill-progress-bar" style="width: 80%"></div>
+                                </div>
+                                <div class="skill-card-badges">
+                                    <span class="skill-badge">MySQL</span>
+                                    <span class="skill-badge">MongoDB</span>
+                                    <span class="skill-badge">ORM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- UI/UX -->
+                        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="skill-card ui-ux">
+                                <div class="skill-card-icon">
+                                    <i class="fas fa-pencil-ruler"></i>
+                                </div>
+                                <div class="skill-card-info">
+                                    <h4>UI/UX Design</h4>
+                                    <div class="skill-level">
+                                        <div class="skill-percent">85%</div>
+                                        <div class="skill-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card-progress">
+                                    <div class="skill-progress-bar" style="width: 85%"></div>
+                                </div>
+                                <div class="skill-card-badges">
+                                    <span class="skill-badge">Figma</span>
+                                    <span class="skill-badge">XD</span>
+                                    <span class="skill-badge">Wireframing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-tab-content" id="personal-skills">
+                    <div class="row">
+                        <!-- Problem Solving -->
+                        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="skill-card problem-solving">
+                                <div class="skill-card-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="skill-card-info">
+                                    <h4>حل المشكلات</h4>
+                                    <div class="skill-level">
+                                        <div class="skill-percent">95%</div>
+                                        <div class="skill-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card-progress">
+                                    <div class="skill-progress-bar" style="width: 95%"></div>
+                                </div>
+                                <div class="skill-card-badges">
+                                    <span class="skill-badge">تحليل</span>
+                                    <span class="skill-badge">إبداع</span>
+                                    <span class="skill-badge">منهجية</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Teamwork -->
+                        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="skill-card teamwork">
+                                <div class="skill-card-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="skill-card-info">
+                                    <h4>العمل الجماعي</h4>
+                                    <div class="skill-level">
+                                        <div class="skill-percent">90%</div>
+                                        <div class="skill-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card-progress">
+                                    <div class="skill-progress-bar" style="width: 90%"></div>
+                                </div>
+                                <div class="skill-card-badges">
+                                    <span class="skill-badge">تعاون</span>
+                                    <span class="skill-badge">مرونة</span>
+                                    <span class="skill-badge">تواصل</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Communication -->
+                        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="skill-card communication">
+                                <div class="skill-card-icon">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <div class="skill-card-info">
+                                    <h4>التواصل</h4>
+                                    <div class="skill-level">
+                                        <div class="skill-percent">85%</div>
+                                        <div class="skill-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card-progress">
+                                    <div class="skill-progress-bar" style="width: 85%"></div>
+                                </div>
+                                <div class="skill-card-badges">
+                                    <span class="skill-badge">وضوح</span>
+                                    <span class="skill-badge">إصغاء</span>
+                                    <span class="skill-badge">تعبير</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Management -->
+                        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="skill-card project-management">
+                                <div class="skill-card-icon">
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <div class="skill-card-info">
+                                    <h4>إدارة المشاريع</h4>
+                                    <div class="skill-level">
+                                        <div class="skill-percent">88%</div>
+                                        <div class="skill-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card-progress">
+                                    <div class="skill-progress-bar" style="width: 88%"></div>
+                                </div>
+                                <div class="skill-card-badges">
+                                    <span class="skill-badge">تخطيط</span>
+                                    <span class="skill-badge">تنظيم</span>
+                                    <span class="skill-badge">متابعة</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Creativity -->
+                        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="skill-card creativity">
+                                <div class="skill-card-icon">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                                <div class="skill-card-info">
+                                    <h4>الإبداع</h4>
+                                    <div class="skill-level">
+                                        <div class="skill-percent">92%</div>
+                                        <div class="skill-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card-progress">
+                                    <div class="skill-progress-bar" style="width: 92%"></div>
+                                </div>
+                                <div class="skill-card-badges">
+                                    <span class="skill-badge">ابتكار</span>
+                                    <span class="skill-badge">تصميم</span>
+                                    <span class="skill-badge">تفكير</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Continuous Learning -->
+                        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="skill-card learning">
+                                <div class="skill-card-icon">
+                                    <i class="fas fa-book-reader"></i>
+                                </div>
+                                <div class="skill-card-info">
+                                    <h4>التعلم المستمر</h4>
+                                    <div class="skill-level">
+                                        <div class="skill-percent">95%</div>
+                                        <div class="skill-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-card-progress">
+                                    <div class="skill-progress-bar" style="width: 95%"></div>
+                                </div>
+                                <div class="skill-card-badges">
+                                    <span class="skill-badge">فضول</span>
+                                    <span class="skill-badge">تطوير</span>
+                                    <span class="skill-badge">مواكبة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12 text-center mb-5" data-aos="fade-up">
+                <span class="badge bg-primary rounded-pill px-3 py-2 mb-3">تعليم مستمر</span>
+                <h2 class="mb-4">الشهادات والدورات</h2>
+                <div class="divider mx-auto my-4"></div>
+            </div>
+
+            <div class="col-12">
+                <div class="certificates-container">
+                    <!-- Certificate 1 -->
+                    <div class="certificate-card-wrapper" data-aos="fade-up" data-aos-delay="100">
+                        <div class="certificate-card">
+                            <div class="certificate-header">
+                                <div class="certificate-logo-wrapper">
+                                    <div class="certificate-logo udacity">
+                                        <i class="fab fa-react"></i>
+                                    </div>
+                                </div>
+                                <div class="certificate-date">
+                                    <div class="certificate-year">2023</div>
+                                    <div class="certificate-month">يونيو</div>
+                                </div>
+                            </div>
+                            <div class="certificate-body">
+                                <h3 class="certificate-title">شهادة مطور الواجهة الأمامية المتقدم</h3>
+                                <div class="certificate-issuer">
+                                    <i class="fas fa-award"></i>
+                                    <span>منصة Udacity</span>
+                                </div>
+                                <p class="certificate-description">دورة متقدمة في تطوير واجهات المستخدم باستخدام React.js وتقنيات الويب الحديثة.</p>
+                                <div class="certificate-skills">
+                                    <span class="certificate-skill">React.js</span>
+                                    <span class="certificate-skill">Redux</span>
+                                    <span class="certificate-skill">JavaScript ES6+</span>
+                                </div>
+                            </div>
+                            <div class="certificate-footer">
+                                <a href="#" class="certificate-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>عرض الشهادة</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 2 -->
+                    <div class="certificate-card-wrapper" data-aos="fade-up" data-aos-delay="200">
+                        <div class="certificate-card">
+                            <div class="certificate-header">
+                                <div class="certificate-logo-wrapper">
+                                    <div class="certificate-logo coursera">
+                                        <i class="fas fa-laptop-code"></i>
+                                    </div>
+                                </div>
+                                <div class="certificate-date">
+                                    <div class="certificate-year">2022</div>
+                                    <div class="certificate-month">أغسطس</div>
+                                </div>
+                            </div>
+                            <div class="certificate-body">
+                                <h3 class="certificate-title">شهادة تطوير الويب الكامل</h3>
+                                <div class="certificate-issuer">
+                                    <i class="fas fa-award"></i>
+                                    <span>منصة Coursera</span>
+                                </div>
+                                <p class="certificate-description">دورة شاملة في تطوير الويب تغطي كلاً من الواجهة الأمامية والخلفية، بما في ذلك HTML، CSS، JavaScript، Python، وقواعد البيانات.</p>
+                                <div class="certificate-skills">
+                                    <span class="certificate-skill">HTML/CSS</span>
+                                    <span class="certificate-skill">JavaScript</span>
+                                    <span class="certificate-skill">Node.js</span>
+                                    <span class="certificate-skill">MongoDB</span>
+                                </div>
+                            </div>
+                            <div class="certificate-footer">
+                                <a href="#" class="certificate-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>عرض الشهادة</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 3 -->
+                    <div class="certificate-card-wrapper" data-aos="fade-up" data-aos-delay="300">
+                        <div class="certificate-card">
+                            <div class="certificate-header">
+                                <div class="certificate-logo-wrapper">
+                                    <div class="certificate-logo google">
+                                        <i class="fas fa-pencil-ruler"></i>
+                                    </div>
+                                </div>
+                                <div class="certificate-date">
+                                    <div class="certificate-year">2021</div>
+                                    <div class="certificate-month">مارس</div>
+                                </div>
+                            </div>
+                            <div class="certificate-body">
+                                <h3 class="certificate-title">شهادة تصميم واجهة المستخدم وتجربة المستخدم</h3>
+                                <div class="certificate-issuer">
+                                    <i class="fas fa-award"></i>
+                                    <span>Google</span>
+                                </div>
+                                <p class="certificate-description">دورة متخصصة في تصميم واجهات المستخدم وتحسين تجربة المستخدم، مع التركيز على المبادئ الأساسية والممارسات الحديثة.</p>
+                                <div class="certificate-skills">
+                                    <span class="certificate-skill">UI Design</span>
+                                    <span class="certificate-skill">UX Research</span>
+                                    <span class="certificate-skill">Prototyping</span>
+                                </div>
+                            </div>
+                            <div class="certificate-footer">
+                                <a href="#" class="certificate-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>عرض الشهادة</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificate 4 -->
+                    <div class="certificate-card-wrapper" data-aos="fade-up" data-aos-delay="400">
+                        <div class="certificate-card">
+                            <div class="certificate-header">
+                                <div class="certificate-logo-wrapper">
+                                    <div class="certificate-logo edx">
+                                        <i class="fab fa-python"></i>
+                                    </div>
+                                </div>
+                                <div class="certificate-date">
+                                    <div class="certificate-year">2020</div>
+                                    <div class="certificate-month">نوفمبر</div>
+                                </div>
+                            </div>
+                            <div class="certificate-body">
+                                <h3 class="certificate-title">شهادة Python للمطورين</h3>
+                                <div class="certificate-issuer">
+                                    <i class="fas fa-award"></i>
+                                    <span>منصة edX</span>
+                                </div>
+                                <p class="certificate-description">دورة متقدمة في لغة Python وتطبيقاتها في تطوير الويب، تحليل البيانات، والذكاء الاصطناعي.</p>
+                                <div class="certificate-skills">
+                                    <span class="certificate-skill">Python</span>
+                                    <span class="certificate-skill">Flask</span>
+                                    <span class="certificate-skill">Data Analysis</span>
+                                </div>
+                            </div>
+                            <div class="certificate-footer">
+                                <a href="#" class="certificate-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>عرض الشهادة</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12 text-center mb-5" data-aos="fade-up">
+                <span class="badge bg-primary rounded-pill px-3 py-2 mb-3">التواصل العالمي</span>
+                <h2 class="mb-4">اللغات</h2>
+                <div class="divider mx-auto my-4"></div>
+            </div>
+
+            <div class="col-12">
+                <div class="row justify-content-center">
+                    <!-- Arabic -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="flip-left" data-aos-delay="100">
+                        <div class="language-card arabic">
+                            <div class="language-card-inner">
+                                <div class="language-card-front">
+                                    <div class="language-icon">
+                                        <i class="fas fa-language"></i>
+                                    </div>
+                                    <h3 class="language-name">العربية</h3>
+                                    <div class="language-level-indicator">
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                    </div>
+                                    <div class="language-level-text">اللغة الأم</div>
+                                </div>
+                                <div class="language-card-back">
+                                    <h4>مهارات اللغة العربية</h4>
+                                    <div class="language-skills">
+                                        <div class="language-skill">
+                                            <span class="skill-name">القراءة</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-progress" style="width: 100%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="language-skill">
+                                            <span class="skill-name">الكتابة</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-progress" style="width: 100%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="language-skill">
+                                            <span class="skill-name">التحدث</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-progress" style="width: 100%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="language-skill">
+                                            <span class="skill-name">الاستماع</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-progress" style="width: 100%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- English -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="flip-left" data-aos-delay="200">
+                        <div class="language-card english">
+                            <div class="language-card-inner">
+                                <div class="language-card-front">
+                                    <div class="language-icon">
+                                        <i class="fas fa-language"></i>
+                                    </div>
+                                    <h3 class="language-name">الإنجليزية</h3>
+                                    <div class="language-level-indicator">
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot"></span>
+                                    </div>
+                                    <div class="language-level-text">طلاقة مهنية</div>
+                                </div>
+                                <div class="language-card-back">
+                                    <h4>مهارات اللغة الإنجليزية</h4>
+                                    <div class="language-skills">
+                                        <div class="language-skill">
+                                            <span class="skill-name">القراءة</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-progress" style="width: 95%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="language-skill">
+                                            <span class="skill-name">الكتابة</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-progress" style="width: 90%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="language-skill">
+                                            <span class="skill-name">التحدث</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-progress" style="width: 85%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="language-skill">
+                                            <span class="skill-name">الاستماع</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-progress" style="width: 90%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- French -->
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="flip-left" data-aos-delay="300">
+                        <div class="language-card french">
+                            <div class="language-card-inner">
+                                <div class="language-card-front">
+                                    <div class="language-icon">
+                                        <i class="fas fa-language"></i>
+                                    </div>
+                                    <h3 class="language-name">الفرنسية</h3>
+                                    <div class="language-level-indicator">
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot active"></span>
+                                        <span class="level-dot"></span>
+                                        <span class="level-dot"></span>
+                                    </div>
+                                    <div class="language-level-text">مستوى متوسط</div>
+                                </div>
+                                <div class="language-card-back">
+                                    <h4>مهارات اللغة الفرنسية</h4>
+                                    <div class="language-skills">
+                                        <div class="language-skill">
+                                            <span class="skill-name">القراءة</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-progress" style="width: 75%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="language-skill">
+                                            <span class="skill-name">الكتابة</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-progress" style="width: 65%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="language-skill">
+                                            <span class="skill-name">التحدث</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-progress" style="width: 60%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="language-skill">
+                                            <span class="skill-name">الاستماع</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-progress" style="width: 70%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section py-5 my-5">
+    <div class="container py-5" data-aos="fade-up">
+        <div class="cta-content">
+            <div class="cta-shapes">
+                <div class="cta-shape shape-1"></div>
+                <div class="cta-shape shape-2"></div>
+                <div class="cta-shape shape-3"></div>
+                <div class="cta-shape shape-4"></div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <div class="cta-text">
+                        <span class="cta-badge">لنعمل معًا</span>
+                        <h2 class="cta-title">هل تبحث عن مطور ذو مهارات متنوعة؟</h2>
+                        <p class="cta-description">دعنا نتعاون معًا لتحويل فكرتك إلى واقع رقمي مميز. أنا هنا لمساعدتك في بناء مشروعك بأحدث التقنيات وأفضل الممارسات.</p>
+                        <div class="cta-features">
+                            <div class="cta-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>تصميم مواقع احترافية</span>
+                            </div>
+                            <div class="cta-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>تطوير تطبيقات ويب متكاملة</span>
+                            </div>
+                            <div class="cta-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>حلول مخصصة لاحتياجاتك</span>
+                            </div>
+                        </div>
+                        <div class="cta-buttons">
+                            <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg cta-btn">
+                                <span>تواصل معي الآن</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                            <a href="{{ url_for('projects') }}" class="btn btn-outline-primary btn-lg cta-btn-outline">
+                                <span>مشاهدة أعمالي</span>
+                                <i class="fas fa-eye"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="cta-image">
+                        <img src="{{ url_for('static', filename='img/cta-illustration.svg') }}" alt="تواصل معي" class="img-fluid">
+                        <div class="cta-image-shape"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize skill progress bars
+        initSkillProgressBars();
+
+        // Initialize skills tabs
+        initSkillsTabs();
+
+        // Initialize language cards flip effect
+        initLanguageCards();
+
+        // Initialize certificate cards hover effects
+        initCertificateCards();
+    });
+
+    function initSkillsTabs() {
+        const tabButtons = document.querySelectorAll('.skills-tab-btn');
+        const tabContents = document.querySelectorAll('.skills-tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                // Hide all tab contents
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Show the selected tab content
+                const target = this.getAttribute('data-target');
+                document.getElementById(target + '-skills').classList.add('active');
+            });
+        });
+    }
+
+    function initLanguageCards() {
+        const languageCards = document.querySelectorAll('.language-card');
+
+        languageCards.forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.toggle('flipped');
+            });
+
+            // Add hover effect for skill bars on language cards
+            const skillBars = card.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                const originalWidth = bar.style.width;
+
+                card.addEventListener('mouseenter', function() {
+                    bar.style.width = '0';
+                    setTimeout(() => {
+                        bar.style.width = originalWidth;
+                    }, 300);
+                });
+            });
+        });
+    }
+
+    function initCertificateCards() {
+        const certificateCards = document.querySelectorAll('.certificate-card');
+
+        certificateCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                const logo = this.querySelector('.certificate-logo');
+                logo.classList.add('pulse');
+
+                const skills = this.querySelectorAll('.certificate-skill');
+                skills.forEach((skill, index) => {
+                    setTimeout(() => {
+                        skill.classList.add('bounce');
+
+                        // Remove animation class after animation completes
+                        setTimeout(() => {
+                            skill.classList.remove('bounce');
+                        }, 1000);
+                    }, index * 100);
+                });
+
+                // Remove animation class after animation completes
+                setTimeout(() => {
+                    logo.classList.remove('pulse');
+                }, 1000);
+            });
+        });
+    }
+</script>
+{% endblock %}

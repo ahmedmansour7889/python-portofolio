@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero text-center py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1 class="display-4 mb-3">مرحباً، أنا <span class="text-primary">اسمك هنا</span></h1>
+                <p class="lead mb-4">مطور ويب | مصمم | مبدع محتوى</p>
+                <p class="mb-5">أقوم بتصميم وتطوير تطبيقات ويب احترافية وجذابة. تخصصي هو تحويل الأفكار إلى واقع رقمي.</p>
+                <div class="d-flex justify-content-center">
+                    <a href="{{ url_for('projects') }}" class="btn btn-primary me-3">مشاهدة أعمالي</a>
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline-dark">اتصل بي</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">مهاراتي</h2>
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="skill-card p-4 shadow-sm rounded h-100">
+                    <i class="fas fa-code fa-3x mb-3 text-primary"></i>
+                    <h3>تطوير الواجهة الأمامية</h3>
+                    <p>خبرة في HTML، CSS، JavaScript، و React.js لبناء واجهات مستخدم تفاعلية وجذابة.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="skill-card p-4 shadow-sm rounded h-100">
+                    <i class="fas fa-server fa-3x mb-3 text-primary"></i>
+                    <h3>تطوير الخلفية</h3>
+                    <p>كفاءة في Python، Flask، Django، Node.js، وقواعد البيانات لبناء تطبيقات قوية.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="skill-card p-4 shadow-sm rounded h-100">
+                    <i class="fas fa-paint-brush fa-3x mb-3 text-primary"></i>
+                    <h3>التصميم</h3>
+                    <p>مهارات تصميم جرافيك وخبرة مع Adobe Photoshop، Illustrator، وFigma.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">أحدث المشاريع</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">مشروع 1</h5>
+                        <p class="card-text">وصف موجز للمشروع الأول وما يقدمه من قيمة.</p>
+                        <a href="#" class="btn btn-primary">مشاهدة المشروع</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">مشروع 2</h5>
+                        <p class="card-text">وصف موجز للمشروع الثاني وما يقدمه من قيمة.</p>
+                        <a href="#" class="btn btn-primary">مشاهدة المشروع</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">مشروع 3</h5>
+                        <p class="card-text">وصف موجز للمشروع الثالث وما يقدمه من قيمة.</p>
+                        <a href="#" class="btn btn-primary">مشاهدة المشروع</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('projects') }}" class="btn btn-outline-primary">عرض جميع المشاريع</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

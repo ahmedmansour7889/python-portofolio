@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="downloads-section py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="mb-3" data-aos="fade-up">التحميلات</h1>
+                <p class="lead" data-aos="fade-up" data-aos-delay="100">موارد وملفات مفيدة يمكنك تحميلها مجانًا</p>
+                <div class="divider mx-auto my-4" data-aos="fade-up" data-aos-delay="200"></div>
+            </div>
+        </div>
+        
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="card mb-4" data-aos="fade-up">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0">السيرة الذاتية والملفات الشخصية</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-file-pdf fa-2x text-danger me-3"></i>
+                                    <div>
+                                        <h5 class="mb-1">السيرة الذاتية (PDF)</h5>
+                                        <p class="mb-0 text-muted">حجم الملف: 1.2 MB</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <a href="{{ url_for('static', filename='files/resume.pdf') }}" class="btn btn-outline-primary" download>
+                                    <i class="fas fa-download me-2"></i> تحميل
+                                </a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-file-word fa-2x text-primary me-3"></i>
+                                    <div>
+                                        <h5 class="mb-1">السيرة الذاتية (Word)</h5>
+                                        <p class="mb-0 text-muted">حجم الملف: 950 KB</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <a href="{{ url_for('static', filename='files/resume.docx') }}" class="btn btn-outline-primary" download>
+                                    <i class="fas fa-download me-2"></i> تحميل
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-header bg-success text-white">
+                        <h3 class="mb-0">الكتب الإلكترونية والأدلة</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-book fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h5 class="mb-1">دليل تحسين محركات البحث</h5>
+                                        <p class="mb-0 text-muted">حجم الملف: 3.5 MB</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <a href="{{ url_for('static', filename='files/seo-guide.pdf') }}" class="btn btn-outline-success" download>
+                                    <i class="fas fa-download me-2"></i> تحميل
+                                </a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-book fa-2x text-success me-3"></i>
+                                    <div>
+                                        <h5 class="mb-1">أساسيات تصميم واجهة المستخدم</h5>
+                                        <p class="mb-0 text-muted">حجم الملف: 4.2 MB</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <a href="{{ url_for('static', filename='files/ui-design-basics.pdf') }}" class="btn btn-outline-success" download>
+                                    <i class="fas fa-download me-2"></i> تحميل
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="mb-0">قوالب وموارد</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-file-code fa-2x text-info me-3"></i>
+                                    <div>
+                                        <h5 class="mb-1">قالب موقع شخصي HTML/CSS</h5>
+                                        <p class="mb-0 text-muted">حجم الملف: 2.8 MB</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <a href="{{ url_for('static', filename='files/personal-website-template.zip') }}" class="btn btn-outline-info" download>
+                                    <i class="fas fa-download me-2"></i> تحميل
+                                </a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-palette fa-2x text-info me-3"></i>
+                                    <div>
+                                        <h5 class="mb-1">مجموعة أيقونات SVG</h5>
+                                        <p class="mb-0 text-muted">حجم الملف: 1.5 MB</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <a href="{{ url_for('static', filename='files/svg-icons-pack.zip') }}" class="btn btn-outline-info" download>
+                                    <i class="fas fa-download me-2"></i> تحميل
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-header bg-warning text-dark">
+                        <h3 class="mb-0">عروض تقديمية</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-file-powerpoint fa-2x text-warning me-3"></i>
+                                    <div>
+                                        <h5 class="mb-1">اتجاهات تطوير الويب 2023</h5>
+                                        <p class="mb-0 text-muted">حجم الملف: 5.7 MB</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <a href="{{ url_for('static', filename='files/web-dev-trends-2023.pptx') }}" class="btn btn-outline-warning" download>
+                                    <i class="fas fa-download me-2"></i> تحميل
+                                </a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-file-powerpoint fa-2x text-warning me-3"></i>
+                                    <div>
+                                        <h5 class="mb-1">أساسيات تحسين أداء المواقع</h5>
+                                        <p class="mb-0 text-muted">حجم الملف: 4.3 MB</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-md-end">
+                                <a href="{{ url_for('static', filename='files/website-performance.pptx') }}" class="btn btn-outline-warning" download>
+                                    <i class="fas fa-download me-2"></i> تحميل
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                <div class="alert alert-info">
+                    <h4 class="alert-heading"><i class="fas fa-info-circle me-2"></i> ملاحظة</h4>
+                    <p class="mb-0">جميع الملفات المتاحة للتحميل هي للاستخدام الشخصي فقط. يرجى عدم إعادة توزيعها أو استخدامها لأغراض تجارية دون إذن.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section py-5 my-5 bg-light">
+    <div class="container text-center py-4" data-aos="fade-up">
+        <h2 class="mb-4">هل تحتاج إلى موارد مخصصة؟</h2>
+        <p class="lead mb-4">تواصل معي للحصول على موارد وقوالب مخصصة تناسب احتياجاتك</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">تواصل معي الآن</a>
+    </div>
+</section>
+{% endblock %}
