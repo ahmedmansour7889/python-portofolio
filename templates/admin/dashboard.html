@@ -1,0 +1,246 @@
+{% extends "admin/base.html" %}
+
+{% block title %}لوحة التحكم{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- Page Header -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">لوحة التحكم</h1>
+        <div class="d-none d-sm-inline-block">
+            <a href="{{ url_for('admin.backup') }}" class="btn btn-sm btn-primary shadow-sm">
+                <i class="fas fa-download fa-sm text-white-50"></i> نسخة احتياطية
+            </a>
+        </div>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="row">
+        <!-- Projects Card -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">المشاريع</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ published_projects }}/{{ total_projects }}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-project-diagram fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Posts Card -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">المقالات</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ published_posts }}/{{ total_posts }}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-blog fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials Card -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">التقييمات</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ approved_testimonials }}/{{ total_testimonials }}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Unread Messages Card -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">رسائل غير مقروءة</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ unread_contacts }}</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-envelope fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Analytics Chart -->
+    <div class="row">
+        <div class="col-xl-8 col-lg-7">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">إحصائيات الزيارات (آخر 30 يوم)</h6>
+                </div>
+                <div class="card-body">
+                    <div class="chart-area">
+                        <canvas id="visitsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Pages -->
+        <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">الصفحات الأكثر زيارة</h6>
+                </div>
+                <div class="card-body">
+                    {% for page in analytics_data.top_pages[:5] %}
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <div class="text-truncate">{{ page.page }}</div>
+                        <div class="text-muted">{{ page.views }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="row">
+        <!-- Recent Projects -->
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">أحدث المشاريع</h6>
+                </div>
+                <div class="card-body">
+                    {% for project in recent_projects %}
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-primary">
+                                <i class="fas fa-project-diagram text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">{{ project.created_at|datetime }}</div>
+                            <a href="{{ url_for('admin.edit_project', id=project.id) }}" class="text-decoration-none">
+                                {{ project.title }}
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <a href="{{ url_for('admin.projects') }}" class="btn btn-primary btn-sm">عرض الكل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Blog Posts -->
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-success">أحدث المقالات</h6>
+                </div>
+                <div class="card-body">
+                    {% for post in recent_posts %}
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-success">
+                                <i class="fas fa-blog text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">{{ post.created_at|datetime }}</div>
+                            <a href="{{ url_for('admin.edit_blog_post', id=post.id) }}" class="text-decoration-none">
+                                {{ post.title }}
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <a href="{{ url_for('admin.blog_posts') }}" class="btn btn-success btn-sm">عرض الكل</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Contacts -->
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-warning">أحدث الرسائل</h6>
+                </div>
+                <div class="card-body">
+                    {% for contact in recent_contacts %}
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="mr-3">
+                            <div class="icon-circle bg-warning">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="small text-gray-500">{{ contact.created_at|datetime }}</div>
+                            <a href="{{ url_for('admin.view_contact', id=contact.id) }}" class="text-decoration-none">
+                                {{ contact.subject }}
+                            </a>
+                            {% if not contact.read %}
+                            <span class="badge badge-danger">جديد</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <a href="{{ url_for('admin.contacts') }}" class="btn btn-warning btn-sm">عرض الكل</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// Visits Chart
+const ctx = document.getElementById('visitsChart').getContext('2d');
+const visitsChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: {{ analytics_data.daily_views|map(attribute='date')|list|tojson }},
+        datasets: [{
+            label: 'الزيارات',
+            data: {{ analytics_data.daily_views|map(attribute='views')|list|tojson }},
+            borderColor: '#4e73df',
+            backgroundColor: 'rgba(78, 115, 223, 0.1)',
+            borderWidth: 2,
+            fill: true,
+            tension: 0.3
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    stepSize: 1
+                }
+            }
+        }
+    }
+});
+</script>
+{% endblock %}
